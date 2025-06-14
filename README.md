@@ -1,51 +1,31 @@
 # CODECRAFT_DS_03
+
 # 🌳 Task 03 – Decision Tree Classifier (Pure Python)
 
-This repository contains a simple **Decision Tree Classifier** implemented using **pure Python**, without any external libraries or CSV handling. It is part of the internship tasks for **CodeCraft**.
+This task implements a simple decision tree classifier using only core Python (no external libraries or CSV files).
 
----
+## ✅ What I Did
+- Created a mini version of a customer dataset using Python dictionaries
+- Implemented manual decision rules using if-else logic
+- Predicted whether the customer would subscribe to a product based on:
+  - Age
+  - Job
+  - Marital status
+  - Previous campaign outcome
 
-## 🧠 Objective
+## 🧠 Skills Used
+- Dictionary handling
+- Manual rule-based classification
+- Conditional logic (if-else)
+- Data simulation
 
-> Build a decision tree classifier to predict whether a customer will purchase a product or service based on their demographic and behavioral data.
+## 📄 File
+- `task3.py`
 
-Dataset used: [Bank Marketing Dataset – UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing)
+## 🔍 Sample Output
+Customer 1: {'age': 35, 'job': 'admin', 'marital': 'married', 'previous': 'success'}
+Prediction: Subscribed ✅
 
----
-
-## 📁 Files Included
-
-| File Name   | Description                                   |
-|-------------|-----------------------------------------------|
-| `task3.py`  | Core Python script with the rule-based classifier logic |
-| `README.md` | This documentation file                       |
-
----
-
-## 📊 Features Used for Classification
-
-- `age`
-- `job`
-- `marital`
-- `previous` (outcome of previous marketing campaign)
-
----
-
-## 🔍 Classifier Logic
-
-The classifier uses simple rule-based conditions derived from dataset patterns:
-
-```python
-if customer['previous'] == 'success':
-    return 'Subscribed'
-elif customer['job'] == 'student':
-    return 'Subscribed'
-elif customer['age'] > 40 and customer['job'] == 'technician':
-    return 'Subscribed'
-else:
-    return 'Not Subscribed'
-# 🙋‍♀️ Author
-Kifa Fathima
-Data Science Intern
-CodeCraft Internship Program
-
+## 🙋‍♀️ Author
+**Kifa Fathima**  
+Data Science Intern @ CodeCraft
