@@ -1,0 +1,24 @@
+customers = [
+    {'age': 35, 'job': 'admin', 'marital': 'married', 'previous': 'success'},
+    {'age': 28, 'job': 'student', 'marital': 'single', 'previous': 'failure'},
+    {'age': 45, 'job': 'technician', 'marital': 'married', 'previous': 'success'},
+    {'age': 40, 'job': 'blue-collar', 'marital': 'divorced', 'previous': 'unknown'},
+    {'age': 31, 'job': 'services', 'marital': 'single', 'previous': 'failure'}
+]
+
+def predict(customer):
+    if customer['previous'] == 'success':
+        return 'Subscribed ✅'
+    elif customer['job'] == 'student':
+        return 'Subscribed ✅'
+    elif customer['age'] > 40 and customer['job'] == 'technician':
+        return 'Subscribed ✅'
+    elif customer['marital'] == 'single' and customer['previous'] == 'unknown':
+        return 'Not Subscribed ❌'
+    else:
+        return 'Not Subscribed ❌'
+
+for i, cust in enumerate(customers):
+    print(f"Customer {i+1}: {cust}")
+    print("Prediction:", predict(cust))
+    print("-" * 40)
